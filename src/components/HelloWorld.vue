@@ -23,6 +23,7 @@
 </template>
 <script lang="ts">
 import { defineComponent, ref } from 'vue'
+//refer to shims-vuex.d.ts to see how to export useStore
 import { useStore } from 'vuex'
 
 export default defineComponent({
