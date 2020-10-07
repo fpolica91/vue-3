@@ -26,6 +26,9 @@ import { defineComponent, ref } from 'vue'
 import { useStore } from 'vuex'
 
 export default defineComponent({
+  // this is the composition api,
+  // here you can reference to properties from vuex
+  // any property that is needed please be sure to return
   setup() {
     const store = useStore()
     const state = ref(store.state)
@@ -35,6 +38,7 @@ export default defineComponent({
     const handleDecrement = () => {
       store.commit('decrement')
     }
+    // as mentioned the properties needed have to be returned here
     return {
       state,
       handleIncrement,
